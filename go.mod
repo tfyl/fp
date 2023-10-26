@@ -61,8 +61,8 @@ require (
 )
 
 replace (
-	github.com/gospider007/gtls latest => github.com/tfyl/gtls latest
-	github.com/gospider007/ja3 latest => github.com/tfyl/ja3 latest
-	github.com/gospider007/net latest => github.com/tfyl/net latest
-	github.com/gospider007/tools latest => github.com/tfyl/tools latest
+	github.com/gospider007/gtls v0.0.0-20231024092712-01193b9f0404 => github.com/tfyl/gtls v0.0.0-20231026125846-02d126c22bb4
+	github.com/gospider007/ja3 v0.0.0-20231026095433-377368acbd76 => github.com/tfyl/ja3 v0.0.0-20231026130336-9e1c6d0329c2
+	github.com/gospider007/net v0.0.0-20231026095258-1d82735803e9 => github.com/tfyl/net v0.0.0-20231026130156-794b75422408
+	github.com/gospider007/tools v0.0.0-20231024115950-be51fa815fcd => github.com/tfyl/tools v0.0.0-20231026130336-1ff90e827e1b
 )
