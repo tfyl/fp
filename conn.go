@@ -8,8 +8,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/gospider007/ja3"
 	"github.com/gospider007/tools"
+	"github.com/tfyl/ja3"
 )
 
 type TlsConn struct {
