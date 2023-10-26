@@ -10,9 +10,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/tfyl/gtls"
-	"github.com/tfyl/ja3"
-	"github.com/tfyl/net/http2"
+	"github.com/gospider007/gtls"
+	"github.com/gospider007/ja3"
+	"github.com/gospider007/net/http2"
 )
 
 type Option struct {

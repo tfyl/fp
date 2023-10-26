@@ -1,14 +1,13 @@
-module github.com/tfyl/fp
+module github.com/gospider007/fp
 
 go 1.21.3
 
 require (
 	github.com/gin-gonic/gin v1.9.1
+	github.com/gospider007/gtls v0.0.0-20231024092712-01193b9f0404
 	github.com/gospider007/ja3 v0.0.0-20231026095227-07c8d888e973
+	github.com/gospider007/net v0.0.0-20231026095258-1d82735803e9
 	github.com/gospider007/tools v0.0.0-20231024115950-be51fa815fcd
-	github.com/tfyl/gtls v0.0.0-20231026124001-5d2e1fffbb44
-	github.com/tfyl/ja3 v0.0.0-20231026124301-c4c1d2cc531f
-	github.com/tfyl/net v0.0.0-20231026124425-bca57e385a29
 )
 
 require (
@@ -25,7 +24,6 @@ require (
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.15.5 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
-	github.com/gospider007/gtls v0.0.0-20231024092712-01193b9f0404 // indirect
 	github.com/gospider007/kinds v0.0.0-20231024093643-7a4424f2d30e // indirect
 	github.com/gospider007/re v0.0.0-20231024115818-adfd03636256 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -60,4 +58,11 @@ require (
 	google.golang.org/protobuf v1.31.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+replace (
+	github.com/gospider007/gtls latest => github.com/tfyl/gtls latest
+	github.com/gospider007/ja3 latest => github.com/tfyl/ja3 latest
+	github.com/gospider007/net latest => github.com/tfyl/net latest
+	github.com/gospider007/tools latest => github.com/tfyl/tools latest
 )
