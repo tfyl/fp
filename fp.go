@@ -10,9 +10,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gospider007/gtls"
-	"github.com/gospider007/ja3"
-	"github.com/gospider007/net/http2"
+	"github.com/tfyl/gtls"
+	"github.com/tfyl/ja3"
+	"github.com/tfyl/net/http2"
 )
 
 type Option struct {
@@ -22,7 +22,7 @@ type Option struct {
 	Certificate tls.Certificate
 	NextProtos  []string
 	Handler     http.Handler
-	AcmeDomain  string
+	AcmeDomains []string
 	AcmeEmail   string
 }
 
@@ -44,8 +44,8 @@ func newTlsConfig(option Option) (*tls.Config, error) {
 		} else {
 			tlsConfig = &tls.Config{Certificates: []tls.Certificate{certificate}}
 		}
-	} else if option.AcmeDomain != "" && option.AcmeEmail != "" {
-		if acme, err := gtls.CreateAcme(option.AcmeDomain, option.AcmeEmail); err != nil {
+	} else if len(option.AcmeDomains) != 0 && option.AcmeEmail != "" {
+		if acme, err := gtls.CreateAcme(option.AcmeDomains, option.AcmeEmail); err != nil {
 			return tlsConfig, err
 		} else {
 			tlsConfig = acme.TLSConfig(option.NextProtos)
